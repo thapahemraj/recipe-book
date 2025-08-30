@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Recipe Book</h1>
+            <div id="theme-icons">
+                <button id="theme-switcher-btn" class="icon-btn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                <button id="sidebar-toggle-btn" class="icon-btn" title="Toggle Sidebar"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <aside id="sidebar">
+        <div class="sidebar-content">
+            <h2>Controls</h2>
+            <div class="features">
+                <div class="form-group">
+                    <label for="search-bar">Search Recipes:</label>
+                    <input type="text" id="search-bar" placeholder="  e.g., Carbonara" style="width: 100%; padding: 10px 0px;" >
+                </div>padding-r
+                <div class="form-group">
+                    <label for="sort-by">Sort By:</label>
+                    <select id="sort-by">
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="calories-asc">Calories (Low-High)</option>
+                        <option value="calories-desc">Calories (High-Low)</option>
+                    </select>
+                </div>
+                <button id="filter-btn">Filter Recipes</button>
+                <div id="total-calories-container">
+                    Total Favorite Calories: <span id="total-calories">0</span>
+                </div>
+                <button id="add-recipe-btn">Add New Recipe</button>
+            </div>
+        </div>
+    </aside>
+
+    <div class="container">
+        <main id="recipe-list" class="recipe-list">
+            <!-- Recipe cards will be injected here by JavaScript -->
+        </main>
+
+        <!-- Modal for adding/editing recipes -->
+        <!-- Filter Modal -->
+        <div id="filter-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn filter-close-btn">&times;</span>
+                <h2>Filter Recipes</h2>
+                <form id="filter-form">
+                    <div class="form-group">
+                        <label for="ingredient-filter">Ingredient:</label>
+                        <div class="autocomplete-container">
+                            <input type="text" id="ingredient-filter" placeholder="e.g., Chicken">
+                            <div class="autocomplete-items" id="ingredient-suggestions"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="calorie-filter">Max Calories:</label>
+                        <input type="range" id="calorie-filter" min="0" max="1000" value="1000">
+                        <span id="calorie-value">1000</span>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Apply Filters</button>
+                        <button type="button" id="reset-filters-btn">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal for adding/editing recipes -->
+        <div id="recipe-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <form id="recipe-form">
+                    <input type="hidden" id="recipe-id">
+                    <h2>Add/Edit Recipe</h2>
+                    <div class="form-group">
+                        <label for="recipe-name">Recipe Name:</label>
+                        <input type="text" id="recipe-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipe-ingredients">Ingredients (comma-separated):</label>
+                        <textarea id="recipe-ingredients" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipe-calories">Calories:</label>
+                        <input type="number" id="recipe-calories" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recipe-image">Image URL:</label>
+                        <input type="text" id="recipe-image" required>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="recipe-must-try">
+                        <label for="recipe-must-try">Must Try</label>
+                    </div>
+                    
+                    <button type="submit">Save Recipe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Recipe Book. Created with ❤️ by <a href="https://thapahemraj.com.np" target="_blank" style="text-decoration: none; color: var(--text-color);"    >thapahemraj</a> .</p>
+    </footer>
+
+    <div id="print-area"></div>
+    <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
