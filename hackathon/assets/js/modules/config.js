@@ -1,7 +1,7 @@
 export const defaultRecipes = [
-    { id: '1', name: 'Spaghetti Carbonara', ingredients: ['Pasta', 'Eggs', 'Pancetta', 'Parmesan Cheese', 'Pepper'], calories: 600, favorite: false, image: 'https://cdn.pixabay.com/photo/2017/03/22/15/34/pasta-2165968_1280.jpg' },
+    { id: '1', name: 'Spaghetti Carbonara', ingredients: ['Pasta', 'Eggs', 'Pancetta', 'Parmesan Cheese', 'Pepper'], calories: 600, favorite: false, image: 'https://www.thespruceeats.com/thmb/ovIQQQxQajADuIE2lqhgqq7ppyE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pasta-carbonara-recipe-5210168-hero-01-80090e56abc04ca19d88ebf7fad1d157.jpg'},
     { id: '2', name: 'Chicken Curry', ingredients: ['Chicken Breast', 'Onion', 'Garlic', 'Coconut Milk', 'Curry Powder'], calories: 450, favorite: true, image: 'https://cdn.pixabay.com/photo/2018/06/18/16/05/indian-food-3482749_1280.jpg' },
-    { id: '3', name: 'Avocado Toast', ingredients: ['Bread', 'Avocado', 'Salt', 'Pepper', 'Red Pepper Flakes'], calories: 250, favorite: false, image: 'https://cdn.pixabay.com/photo/2017/06/02/18/24/avocado-2366088_1280.jpg' },
-    { id: '4', name: 'Lentil Soup', ingredients: ['Lentils', 'Carrots', 'Celery', 'Onion', 'Vegetable Broth'], calories: 300, favorite: false, image: 'https://cdn.pixabay.com/photo/2017/09/16/19/21/soup-2756461_1280.jpg' },
+    { id: '3', name: 'Avocado Toast', ingredients: ['Bread', 'Avocado', 'Salt', 'Pepper', 'Red Pepper Flakes'], calories: 250, favorite: false, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-L_aq9uTgNr77xGqUpXInxD7oVAFD3PdwoH56Ey6a67YJExfycrj0I0wL6tvuz0LcZPqEj-oVSONjVuMO8GVwH8bKN0sROoXuw48eg'},
+    { id: '4', name: 'Lentil Soup', ingredients: ['Lentils', 'Carrots', 'Celery', 'Onion', 'Vegetable Broth'], calories: 300, favorite: false, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRox33zY-1kXy-jjnmll1L4nm0rQOVV9BjBmTCg2AYg3BMWt6LYg5g_Dzwiz0D6z2Jp96tawLc4vYz1atmc2I5Th47yA8ASIZvDsCNjVw'},
     { id: '5', name: 'Salmon with Asparagus', ingredients: ['Salmon Fillet', 'Asparagus', 'Lemon', 'Olive Oil'], calories: 500, favorite: true, image: 'https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_1280.jpg' },
 ];
